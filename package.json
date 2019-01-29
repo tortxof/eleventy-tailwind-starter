@@ -1,10 +1,10 @@
 {
   "scripts": {
     "eleventy-serve": "eleventy --serve",
-    "webpack-watch": "webpack --watch --run-dev",
-    "prestart": "webpack --run-dev",
+    "webpack-watch": "webpack --watch --mode=development",
+    "prestart": "webpack --mode=development",
     "start": "npm-run-all --parallel webpack-watch eleventy-serve",
-    "prebuild": "eleventy; cross-env NODE_ENV=production webpack --run-prod",
+    "prebuild": "eleventy; cross-env NODE_ENV=production webpack --mode=production",
     "build": "cross-env NODE_ENV=production eleventy"
   },
   "devDependencies": {
