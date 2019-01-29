@@ -1,4 +1,9 @@
 {
+  "name": "eleventy-tailwind-starter",
+  "version": "0.0.0",
+  "description": "A starter project to build a static website using eleventy, tailwindcss, and babel.",
+  "author": "Daniel Jones <tortxof@gmail.com> (https://djones.co/)",
+  "license": "ISC",
   "scripts": {
     "eleventy-serve": "eleventy --serve",
     "webpack-watch": "webpack --watch --mode=development",
