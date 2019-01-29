@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    {% if site.env == "production" %}
+    <link rel="stylesheet" href="/assets/styles.css" />
+    {% endif %}
+    <title>{% if title %}{{ title }} - {% endif %}{{ site.name }}</title>
+  </head>
+  <body>
+    <div class="container mx-auto px-4">
+      <header class="text-center">
+        {{ content | safe }}
+      </header>
+    </div>
+    {% if site.env !== "production" %}
+    <script src="/assets/styles.js"></script>
+    {% endif %}
+    <script src="/assets/app.js"></script>
+  </body>
+</html>
