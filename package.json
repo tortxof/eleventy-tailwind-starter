@@ -4,7 +4,9 @@
     "webpack-watch": "webpack --watch --mode=development",
     "prestart": "webpack --mode=development",
     "start": "npm-run-all --parallel webpack-watch eleventy-serve",
-    "prebuild": "eleventy; cross-env NODE_ENV=production webpack --mode=production",
+    "eleventy-prebuild": "eleventy",
+    "webpack-prebuild": "cross-env NODE_ENV=production webpack --mode=production",
+    "prebuild": "npm-run-all eleventy-prebuild webpack-prebuild",
     "build": "cross-env NODE_ENV=production eleventy"
   },
   "devDependencies": {
